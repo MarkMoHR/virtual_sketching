@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- === Header Starts === -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>General Virtual Sketching Framework for Vector Line Art</title>
+
+  <link href="./assets/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/font.css" rel="stylesheet" type="text/css">
+  <link href="./assets/style.css" rel="stylesheet" type="text/css">
+</head>
+<!-- === Header Ends === -->
+
+
+<body>
+
+
+<!-- === Home Section Starts === -->
+<div class="section">
+  <!-- === Title Starts === -->
+    <div class="title">
+      <b>General Virtual Sketching Framework for Vector Line Art</b>
+    </div>
+  <!-- === Title Ends === -->
+  <div class="author">
+    <a href="http://mo-haoran.com/" target="_blank">Haoran Mo</a><sup>1</sup>,&nbsp;
+    <a href="https://esslab.jp/~ess/en/" target="_blank">Edgar Simo-Serra</a><sup>2</sup>,&nbsp;
+    <a href="http://sdcs.sysu.edu.cn/content/2537" target="_blank">Chengying Gao</a><sup>*1</sup>,&nbsp;
+    <a href="https://changqingzou.weebly.com/" target="_blank">Changqing Zou</a><sup>3</sup>,&nbsp;
+    <a href="http://sdcs.sysu.edu.cn/content/2523" target="_blank">Ruomei Wang</a><sup>1</sup>
+  </div>
+  <div class="institution">
+    <sup>1</sup>Sun Yat-sen University,&nbsp;
+    <sup>2</sup>Waseda University,&nbsp;
+    <br>
+    <sup>3</sup>Huawei Technologies Canada
+  </div>
+  <br>
+  <div class="institution">
+    Accepted by <a href="https://s2021.siggraph.org/" target="_blank">ACM SIGGRAPH 2021</a>
+  </div>
+  <div class="link">
+    <a href="" target="_blank">[Paper (coming soon)]</a>&nbsp;
+    <a href="https://github.com/MarkMoHR/virtual_sketching" target="_blank">[Code]</a>
+  </div>
+  <div class="teaser">
+    <img src="https://cdn.jsdelivr.net/gh/mark-cdn/CDN-for-works@1.2/files/SIG21/teaser6.png" style="width: 100%;">
+    <br>
+    <br>
+    <font size="3">
+      Given clean line drawings, rough sketches or photographs of arbitrary resolution as input, our framework generates the corresponding vector line drawings directly. As shown in (b), the framework models a virtual pen surrounded by a dynamic window (red boxes), which moves while drawing the strokes. It learns to move around by scaling the window and sliding to an undrawn area for restarting the drawing (bottom example; sliding trajectory in blue arrow). With our proposed stroke regularization mechanism, the framework is able to enlarge the window and draw long strokes for simplicity (top example).
+    </font>
+  </div>
+</div>
+<!-- === Home Section Ends === -->
+
+
+<!-- === Overview Section Starts === -->
+<div class="section">
+  <div class="title">Abstract</div>
+  <div class="body">
+    Vector line art plays an important role in graphic design, however, it is tedious to manually create.
+    We introduce a general framework to produce line drawings from a wide variety of images,
+    by learning a mapping from raster image space to vector image space.
+    Our approach is based on a recurrent neural network that draws the lines one by one.
+    A differentiable rasterization module allows for training with only supervised raster data.
+    We use a dynamic window around a virtual pen while drawing lines,
+    implemented with a proposed aligned cropping and differentiable pasting modules.
+    Furthermore, we develop a stroke regularization loss
+    that encourages the model to use fewer and longer strokes to simplify the resulting vector image.
+    Ablation studies and comparisons with existing methods corroborate the efficiency of our approach
+    which is able to generate visually better results in less computation time,
+    while generalizing better to a diversity of images and applications.
+  </div>
+  <div class="link">
+    <a href="" target="_blank">[Main Paper (TBD)]</a>&nbsp; &nbsp;
+    <a href="" target="_blank">[Supplementary (TBD)]</a>&nbsp; &nbsp;
+	<a href="https://github.com/MarkMoHR/virtual_sketching" target="_blank">[Code]</a>&nbsp; &nbsp;
+	<a href="" target="_blank">[Presentation (TBD)]</a>
+  </div>
+</div>
+<!-- === Overview Section Ends === -->
+
+
+<!-- === Result Section Starts === -->
+<div class="section">
+  <div class="title">Framework Overview</div>
+  <div class="body">
+    <img src="https://cdn.jsdelivr.net/gh/mark-cdn/CDN-for-works@1.2/files/SIG21/framework6.png" width="100%">
+    <br>
+    <br>
+    <font size="4">
+      Our framework generates the parametrized strokes step by step in a recurrent manner.
+      It uses a dynamic window (dashed red boxes) around a virtual pen to draw the strokes,
+      and can both move and change the size of the window.
+      (a) Four main modules at each time step: aligned cropping, stroke generation, differentiable rendering and differentiable pasting.
+      (b) Architecture of the stroke generation module.
+      (c) Structural strokes predicted at each step;
+      movement only is illustrated by blue arrows during which no stroke is drawn on the canvas.
+    </font>
+  </div>
+</div>
+<!-- === Result Section Ends === -->
+
+
+<!-- === Result Section Starts === -->
+<!--<div class="section">-->
+  <!--<div class="title">Results</div>-->
+  <!--<div class="body">-->
+    <!--<img src="https://cdn.jsdelivr.net/gh/SketchyScene/CDN-for-figures@1.0/figures/siga19/results1.png" width="100%">-->
+    <!--<p style="margin-top: 10pt"></p>-->
+    <!--<img src="https://cdn.jsdelivr.net/gh/SketchyScene/CDN-for-figures@1.0/figures/siga19/results2.png" width="100%">-->
+    <!--<p style="margin-top: 20pt"></p>-->
+    <!--<font size="3">*For more results, please see main paper and the supplementary material.-->
+    <!--</font>-->
+
+  <!--</div>-->
+<!--</div>-->
+<!-- === Result Section Ends === -->
+
+
+<!-- === Result Section Starts === -->
+<div class="section">
+  <div class="title">Videos</div>
+  <br>
+  <div class="body">
+    <p style="text-align:center; font-size:25px; font-weight:bold">Overall Introduction<p>
+    <p style="margin-top: 20pt"><a name="demo"></a></p>
+    <!-- Adjust the frame size based on the demo (EVERY project differs). -->
+    <div style="position: relative; padding-top: 50%; margin: 20pt 0; text-align: center;">
+      <iframe src="https://www.youtube.com/embed/gXk3TMceByY" frameborder=0
+              style="position: absolute; top: 1%; left: 5%; width: 90%; height: 100%;"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+    </div>
+
+    <p style="text-align:center; font-size:25px; font-weight:bold">More Results<p>
+    <p style="margin-top: 20pt"><a name="demo"></a></p>
+    <!-- Adjust the frame size based on the demo (EVERY project differs). -->
+    <div style="position: relative; padding-top: 50%; margin: 20pt 0; text-align: center;">
+      <iframe src="https://www.youtube.com/embed/Pr6mK9ddXkQ" frameborder=0
+              style="position: absolute; top: 1%; left: 5%; width: 90%; height: 100%;"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+<!-- === Result Section Ends === -->
+
+
+<!-- === Reference Section Starts === -->
+<div class="section">
+  <div class="bibtex">BibTeX</div>
+<pre>
+@article{mo2021virtualsketching,
+    title   = {General Virtual Sketching Framework for Vector Line Art},
+    author  = {Mo, Haoran and Simo-Serra, Edgar and Gao, Chengying and Zou, Changqing and Wang, Ruomei},
+    journal = {ACM Transactions on Graphics (Proceedings of ACM SIGGRAPH 2021)},
+    year    = {2021},
+}
+</pre>
+    <!--volume  = 38,-->
+    <!--number  = 6,-->
+    <!--pages   = {233:1&#45;&#45;233:16}-->
+<!--}-->
+
+  <!--<br>-->
+  <!--<div class="bibtex">Related Work</div>-->
+  <!--<div class="citation">-->
+    <!--<div class="comment">-->
+      <!--Changqing Zou, Qian Yu, Ruofei Du, Haoran Mo, Yi-Zhe Song, Tao Xiang, Chengying Gao, Baoquan Chen and Hao Zhang.-->
+      <!--<strong>SketchyScene: Richly-Annotated Scene Sketches</strong>. ECCV, 2018.-->
+      <!--[<a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Changqing_Zou_SketchyScene_Richly-Annotated_Scene_ECCV_2018_paper.pdf">Paper</a>]-->
+      <!--[<a href="https://sketchyscene.github.io/SketchyScene/">Webpage</a>]-->
+      <!--[<a href="https://github.com/SketchyScene/SketchyScene">Code</a>]<br><br>-->
+    <!--</div>-->
+
+    <!--<div class="comment">-->
+      <!--Jianbo Chen, Yelong Shen, Jianfeng Gao, Jingjing Liu and Xiaodong Liu. <strong>Language-Based Image Editing with Recurrent Attentive Models</strong>. CVPR, 2018. [<a href="https://arxiv.org/pdf/1711.06288.pdf">Paper</a>][<a href="https://github.com/Jianbo-Lab/LBIE">Code</a>]<br><br>-->
+    <!--</div>-->
+
+    <!--<div class="comment">-->
+      <!--Wengling Chen and James Hays. <strong>SketchyGAN: Towards Diverse and Realistic Sketch to Image Synthesis</strong>. CVPR, 2018. [<a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_SketchyGAN_Towards_Diverse_CVPR_2018_paper.pdf">Paper</a>][<a href="https://github.com/wchen342/SketchyGAN">Code</a>]<br><br>-->
+    <!--</div>-->
+
+    <!--<div class="comment">-->
+      <!--Chenxi Liu, Zhe Lin, Xiaohui Shen, Jimei Yang, Xin Lu and Alan Yuille. <strong>Recurrent Multimodal Interaction for Referring Image Segmentation</strong>. ICCV, 2017. [<a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Liu_Recurrent_Multimodal_Interaction_ICCV_2017_paper.pdf">Paper</a>][<a href="https://github.com/chenxi116/TF-phrasecut-public">Code</a>]<br><br>-->
+    <!--</div>-->
+  <!--</div>-->
+</div>
+<!-- === Reference Section Ends === -->
+
+
+</body>
+</html>
