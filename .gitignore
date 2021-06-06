@@ -1,5 +1,16 @@
 .idea
 .idea/
+data/
+datas/
+dataset/
+datasets/
+model/
+models/
+testData/
+output/
+outputs/
+
+*.csv
 
 # temporary files
 *.txt~
