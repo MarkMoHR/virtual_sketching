@@ -247,7 +247,7 @@ def main_testing(test_image_base_dir, test_dataset, test_image_name,
     # loads the weights from checkpoint into our model
     snapshot_step = load_checkpoint(sess, model_dir, gen_model_pretrain=True)
     print('snapshot_step', snapshot_step)
-    sampling_dir = os.path.join(sampling_base_dir, test_dataset + '_|_' + model_name)
+    sampling_dir = os.path.join(sampling_base_dir, test_dataset + '__' + model_name)
     os.makedirs(sampling_dir, exist_ok=True)
 
     for sampling_i in range(sampling_num):
