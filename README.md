@@ -2,7 +2,9 @@
 
 [Paper](https://esslab.jp/publications/HaoranSIGRAPH2021.pdf) | [Project Page](https://markmohr.github.io/virtual_sketching/)
 
-<img src='docs/figures/muten.png' height=200><img src='docs/figures/muten-black-full-simplest.gif' height=200><img src='docs/figures/rocket.png' height=100><img src='docs/figures/rocket-blue-simplest.gif' height=100><img src='docs/figures/1390.png' height=100><img src='docs/figures/face-blue-1390-simplest.gif' height=100>
+<img src='docs/figures/muten.png' height=300><img src='docs/figures/muten-black-full-simplest.gif' height=300>
+
+<img src='docs/figures/rocket.png' height=200><img src='docs/figures/rocket-blue-simplest.gif' height=200>&nbsp;&nbsp;&nbsp;&nbsp;<img src='docs/figures/1390.png' height=200><img src='docs/figures/face-blue-1390-simplest.gif' height=200>
 
 ## Outline
 - [Dependencies](#dependencies)
@@ -11,11 +13,11 @@
 - [Citation](#citation)
 
 ## Dependencies
- - Tensorflow (1.12.0 <= version <=1.15.0)
- - opencv == 3.4.2
- - pillow == 6.2.0
- - scipy == 1.5.2
- - gizeh == 0.1.11
+ - [Tensorflow](https://www.tensorflow.org/) (1.12.0 <= version <=1.15.0)
+ - [opencv](https://opencv.org/) == 3.4.2
+ - [pillow](https://pillow.readthedocs.io/en/latest/index.html) == 6.2.0
+ - [scipy](https://www.scipy.org/) == 1.5.2
+ - [gizeh](https://github.com/Zulko/gizeh) == 0.1.11
 
 ## Testing with Trained Weights
 ### Model Preparation
@@ -89,17 +91,18 @@ python3 tools/svg_conversion.py --file path/to/the/result.npz
 
 In SVG format, all the segments on a path share the same *stroke-width*. While in our stroke design,  strokes on a common curve have different widths. Inside a stroke (a single segment), the thickness also changes linearly from an endpoint to another. 
 Therefore, neither of the two conversion methods above generate visually the same results as the ones in our paper.
-*Please mention this issue in your paper if you do qualitative comparisons with our results in SVG format.*
+*(Please mention this issue in your paper if you do qualitative comparisons with our results in SVG format.)*
 
 
+<br>
 
 ## Training
 
 ### Preparations
 
 Download the models [here](https://drive.google.com/drive/folders/1-hi2cl8joZ6oMOp4yvk_hObJGAK6ELHB?usp=sharing): 
-  - `pretrain_neural_renderer` (40 MB): the neural renderer
-  - `pretrain_perceptual_model` (691 MB): the perceptual model for raster loss
+  - `pretrain_neural_renderer` (40 MB): the pre-trained neural renderer
+  - `pretrain_perceptual_model` (691 MB): the pre-trained perceptual model for raster loss
 
 Download the datasets [here](https://drive.google.com/drive/folders/1-hi2cl8joZ6oMOp4yvk_hObJGAK6ELHB?usp=sharing): 
   - `QuickDraw-clean` (14 MB): for clean line drawing vectorization. Taken from [QuickDraw](https://github.com/googlecreativelab/quickdraw-dataset) dataset.
@@ -120,7 +123,7 @@ outputs/
 
 ### Running
 
-The training of the three tasks are under 2 GPUs (each with 11 GB).
+It is recommended to train with multi-GPU. We train each task with 2 GPUs (each with 11 GB).
 
 ``` python
 python3 train_vectorization.py
@@ -130,10 +133,11 @@ python3 train_rough_photograph.py --data rough
 python3 train_rough_photograph.py --data face
 ```
 
+<br>
 
 ## Citation
 
-If you use these code and models please cite:
+If you use the code and models please cite:
 
 ```
 @article{mo2021virtualsketching,
