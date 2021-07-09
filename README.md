@@ -1,6 +1,6 @@
 # General Virtual Sketching Framework for Vector Line Art - SIGGRAPH 2021
 
-[[Paper]](https://esslab.jp/publications/HaoranSIGRAPH2021.pdf) | [[Project Page]](https://markmohr.github.io/virtual_sketching/)
+[[Paper]](https://esslab.jp/publications/HaoranSIGRAPH2021.pdf) | [[Project Page]](https://markmohr.github.io/virtual_sketching/) | [[中文Readme]](/README_CN.md)
 
 This code is used for **line drawing vectorization**, **rough sketch simplification** and **photograph to vector line drawing**.
 
