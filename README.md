@@ -110,7 +110,7 @@ Download the datasets [here](https://drive.google.com/drive/folders/1-hi2cl8joZ6
   - `QuickDraw-clean` (14 MB): for clean line drawing vectorization. Taken from [QuickDraw](https://github.com/googlecreativelab/quickdraw-dataset) dataset.
   - `QuickDraw-rough` (361 MB): for rough sketch simplification. Synthesized by the pencil drawing generation method from [Sketch Simplification](https://github.com/bobbens/sketch_simplification#pencil-drawing-generation).
   - `CelebAMask-faces` (370 MB): for photograph to line drawing. Processed from the [CelebAMask-HQ](https://github.com/switchablenorms/CelebAMask-HQ) dataset.
-  
+
 Then, place them in this file structure:
 ```
 datasets/
@@ -153,4 +153,12 @@ If you use the code and models please cite:
 }
 ```
 
+<br>
 
+## Applications in Other Projects
+
+| **[Painterly style transfer](https://github.com/xch-liu/Painterly-Style-Transfer) (TVCG 2023)**  | **[Robot calligraphy](https://github.com/LoYuXr/CalliRewrite) (ICRA 2024)** | 
+|:-------------:|:-------------------:|
+| <img src="docs/figures/applications/Painterly-Style-Transfer.png" style="height: 200px"> | <img src="docs/figures/applications/robot-calligraphy.png" style="height: 200px"> |
+| **[Geometrized cartoon line inbetweening](https://github.com/lisiyao21/AnimeInbet) (ICCV 2023)**  | **[Stroke correspondence and inbetweening](https://github.com/MarkMoHR/JoSTC) (TOG 2024)** | 
+| <img src="docs/figures/applications/Geometrized-Cartoon-Line-Inbetweening.png" style="height: 200px"> | <img src="docs/figures/applications/Vector-Line-Inbetweening2.png" style="height: 200px"><img src="docs/figures/applications/Vector-Line-Inbetweening-dynamic1.gif" style="height: 200px"> |
