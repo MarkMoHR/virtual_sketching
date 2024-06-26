@@ -13,6 +13,7 @@ This code is used for **line drawing vectorization**, **rough sketch simplificat
 - [Testing with Trained Weights](#testing-with-trained-weights)
 - [Training](#training)
 - [Citation](#citation)
+- [Projects Using this Model/Method](#projects-using-this-modelmethod)
 
 ## Dependencies
  - [Tensorflow](https://www.tensorflow.org/) (1.12.0 <= version <=1.15.0)
@@ -155,10 +156,10 @@ If you use the code and models please cite:
 
 <br>
 
-## Applications in Other Projects
+## Projects Using this Model/Method
 
 | **[Painterly style transfer](https://github.com/xch-liu/Painterly-Style-Transfer) (TVCG 2023)**  | **[Robot calligraphy](https://github.com/LoYuXr/CalliRewrite) (ICRA 2024)** | 
 |:-------------:|:-------------------:|
-| <img src="docs/figures/applications/Painterly-Style-Transfer.png" style="height: 200px"> | <img src="docs/figures/applications/robot-calligraphy.png" style="height: 200px"> |
+| <img src="docs/figures/applications/Painterly-Style-Transfer.png" style="height: 170px"> | <img src="docs/figures/applications/robot-calligraphy.png" style="height: 170px"> |
 | **[Geometrized cartoon line inbetweening](https://github.com/lisiyao21/AnimeInbet) (ICCV 2023)**  | **[Stroke correspondence and inbetweening](https://github.com/MarkMoHR/JoSTC) (TOG 2024)** | 
-| <img src="docs/figures/applications/Geometrized-Cartoon-Line-Inbetweening.png" style="height: 200px"> | <img src="docs/figures/applications/Vector-Line-Inbetweening2.png" style="height: 200px"><img src="docs/figures/applications/Vector-Line-Inbetweening-dynamic1.gif" style="height: 200px"> |
+| <img src="docs/figures/applications/Geometrized-Cartoon-Line-Inbetweening.png" style="height: 170px"> | <img src="docs/figures/applications/Vector-Line-Inbetweening2.png" style="height: 170px"><img src="docs/figures/applications/Vector-Line-Inbetweening-dynamic1.gif" style="height: 170px"> |
