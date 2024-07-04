@@ -163,3 +163,5 @@ If you use the code and models please cite:
 | <img src="docs/figures/applications/Painterly-Style-Transfer.png" style="height: 170px"> | <img src="docs/figures/applications/robot-calligraphy.png" style="height: 170px"> |
 | **[Geometrized cartoon line inbetweening](https://github.com/lisiyao21/AnimeInbet) (ICCV 2023)**  | **[Stroke correspondence and inbetweening](https://github.com/MarkMoHR/JoSTC) (TOG 2024)** | 
 | <img src="docs/figures/applications/Geometrized-Cartoon-Line-Inbetweening.png" style="height: 170px"> | <img src="docs/figures/applications/Vector-Line-Inbetweening2.png" style="height: 170px"><img src="docs/figures/applications/Vector-Line-Inbetweening-dynamic1.gif" style="height: 170px"> |
+| **[Modelling complex vector drawings](https://github.com/Co-do/Stroke-Cloud) (ICLR 2024)**  |  | 
+| <img src="docs/figures/applications/complex-vector-drawings.png" style="height: 170px"> |  |
