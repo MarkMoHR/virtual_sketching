@@ -14,6 +14,8 @@ This code is used for **line drawing vectorization**, **rough sketch simplificat
 - [Training](#training)
 - [Citation](#citation)
 - [Projects Using this Model/Method](#projects-using-this-modelmethod)
+- [Blogs Mentioning this Paper](#blogs-mentioning-this-paper)
+- [For Windows users](#-windows-users)
 
 ## Dependencies
  - [Tensorflow](https://www.tensorflow.org/) (1.12.0 <= version <=1.15.0)
@@ -165,6 +167,10 @@ If you use the code and models please cite:
 | <img src="docs/figures/applications/Geometrized-Cartoon-Line-Inbetweening.png" style="height: 170px"> | <img src="docs/figures/applications/Vector-Line-Inbetweening2.png" style="height: 170px"><img src="docs/figures/applications/Vector-Line-Inbetweening-dynamic1.gif" style="height: 170px"> |
 | **[Modelling complex vector drawings](https://github.com/Co-do/Stroke-Cloud) (ICLR 2024)**  | **[Sketch-to-Image Generation](https://github.com/BlockDetail/Block-and-Detail) (UIST 2024)** | 
 | <img src="docs/figures/applications/complex-vector-drawings.png" style="height: 170px"> | <img src="docs/figures/applications/sketch-to-image.png" style="height: 170px"> |
+
+## Blogs Mentioning this Paper
+
+- [The state of AI for hand-drawn animation inbetweening](https://yosefk.com/blog/the-state-of-ai-for-hand-drawn-animation-inbetweening.html)
 
 ## 🪟 Windows users
 
